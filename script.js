@@ -40,3 +40,4 @@ document.querySelector("form").addEventListener("submit", function (event) {
     valorInput.value = value ? "R$ " + value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") : "";
   });
   
+  
