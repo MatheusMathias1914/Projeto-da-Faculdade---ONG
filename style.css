@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #007BFF;
+    color: #000000;
+}
+
+header {
+    background: #000000;
+    color: rgb(255, 0, 0);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 5rem;
+    margin: 0 auto;
+    max-width: 800px;
+    background: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #007bff;
+}
+
+form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+form button {
+    background: #007BFF;
+    color: rgb(247, 247, 247);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #000000;
+    color: rgb(255, 255, 255);
+}
+
+#fundo {
+    
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #007BFF;
+}
+
+#doacao {
+    padding: 5rem;
+    margin: 0 auto;
+    max-width: 800px;
+    background: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(250, 249, 249, 0.1);
+}
+
+#doacao h2 {
+    color: #007BFF;
+    text-align: center;
+}
+
+#doacao p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+#doacao form {
+    display: flex;
+    flex-direction: column;
+}
+
+#doacao label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#doacao input, #doacao select, #doacao textarea {
+    padding: 0.75rem;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+#doacao button {
+    background: #007BFF;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#doacao button:hover {
+    background: #007BFF;
+}
+
+
+
+#doacoes
+
+    { 
+        font-size: 19px;
+    
+color: #FFFFFF !important;
+    line-height: 1.5em;
+    background-color: #5791c1;
+    border-radius: 25px 25px 25px 25px;
+    overflow: hidden;
+    padding-top: 60px !important;
+    padding-right: 30px !important;
+    padding-bottom: 60px !important;
+    padding-left: 40px !important;
+}
