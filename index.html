@@ -22,6 +22,7 @@
     <section id="home">
         <h1>Bem-vindo à MM Tecnologia</h1>
         <img id="fundo" src="./assets/Imagem 1.jpg" alt="fundo">
+        <img id="fundo" src="./assets/Imagem2logo.png" alt="fundo">
         <p>MATHEUS DE OLIVEIRA MATHIAS - RA: 322202184 </p>
         <section id="sobre-nos">
             "Olá! Meu nome é Matheus Mathias, sou um estudante apaixonado por Tecnologia da Informação. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na UNINOVE. Este site é parte de um Projeto Acadêmico que reflete meu interesse em explorar novas idéias e aplicar o que aprendo no dia a dia. Estou atuando na área como Analista."
@@ -67,42 +68,58 @@
             <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
     
             <label for="valor">Valor da Doação (R$):</label>
-            <input type="text" id="valor" name="valor" placeholder="Digite o valor da sua doação" required min="1">
-            
-            <script>
-                const input = document.getElementById('valor');
-                
-                input.addEventListener('input', function(event) {
-                    let value = input.value.replace(/[^\d]/g, ''); // Remove tudo que não for número
-                    
-                    if (value.length > 2) {
-                        value = value.replace(/(\d)(\d{2})$/, "$1,$2"); // Adiciona a vírgula para centavos
-                        value = value.replace(/(?=(\d{3})+(\d))/g, "$1."); // Adiciona os pontos para separação de milhar
-                    }
-                    
-                    // Quando o campo estiver vazio, não exibe 'R$ ' ou um valor multiplicado
-                    if (value === "") {
-                        input.value = ""; 
-                    } else {
-                        input.value = 'R$ ' + value;
-                    }
-                });
-            </script>
-            
+<input type="text" id="valor" name="valor" placeholder="Digite o valor da sua doação" required min="1">
+
+<script>
+    const input = document.getElementById('valor');
+
+    input.addEventListener('input', function(event) {
+        // Remove qualquer caractere que não seja número ou vírgula
+        let value = input.value.replace(/[^\d,]/g, '');
+
+        // Verifica se já existe uma vírgula e limita a quantidade de casas decimais
+        if (value.indexOf(',') !== -1) {
+            let [integer, decimal] = value.split(',');
+            decimal = decimal.substring(0, 2); // Limita a duas casas decimais
+            value = integer + ',' + decimal;
+        }
+
+        // Função para formatar o número com ponto para milhar
+        function formatNumber(value) {
+            // Adiciona ponto para milhar
+            value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+
+            return value;
+        }
+
+        // Formata o valor sem o "R$"
+        let formattedValue = formatNumber(value);
+
+        // Se o campo estiver vazio, limpa
+        if (formattedValue === "") {
+            input.value = "";
+        } else {
+            // Adiciona o "R$" na frente da formatação
+            input.value = 'R$ ' + formattedValue;
+        }
+    });
 </script>
+
+
+
+
+
+
 
     
             <label for="metodo_pagamento">Método de Pagamento:</label>
             <select id="metodo_pagamento" name="metodo_pagamento" required>
                 <option value="cartao_credito">Cartão de Crédito</option>
-                <img id="doacoes" src="./assets/doacao2.png" alt="fundo">
                 <option value="cartao_debito">Cartão de Débito</option>
                 <option value="boleto">Boleto Bancário</option>
-                <img id="doacoes" src="./assets/doacao4.png" alt="fundo">
                 <option value="pix">Pix</option>
-                <img id="doacoes" src="./assets/doacao3.png" alt="fundo">
                 <option value="paypal">PayPal</option>
-                <img id="doacoes" src="./assets/doacao1.png" alt="fundo">
+                
             </select>
     
             <label for="mensagem">Mensagem (Opcional):</label>
@@ -130,3 +147,4 @@
 
 
 
+<img id="fundo" src="./assets/Imagem2logo.png" alt="fundo">

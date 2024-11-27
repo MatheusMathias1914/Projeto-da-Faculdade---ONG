@@ -128,19 +128,3 @@ footer {
 }
 
 
-
-#doacoes
-
-    { 
-        font-size: 19px;
-    
-color: #FFFFFF !important;
-    line-height: 1.5em;
-    background-color: #5791c1;
-    border-radius: 25px 25px 25px 25px;
-    overflow: hidden;
-    padding-top: 60px !important;
-    padding-right: 30px !important;
-    padding-bottom: 60px !important;
-    padding-left: 40px !important;
-}
