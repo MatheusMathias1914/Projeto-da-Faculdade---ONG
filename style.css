@@ -1,130 +1,348 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #007BFF;
-    color: #000000;
+  font-family: 'Roboto', sans-serif; /* Fonte principal para o corpo do texto */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Cor de fundo mais suave */
+  color: #ee3f3f;
+  font-size: 1.2rem; 
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Usando Poppins para títulos */
+  font-weight: 700; /* Títulos mais pesados */
+  color: #007bff; /* Cor de título em azul */
+}
+
+p {
+  font-size: 1.2rem; /* Tamanho maior para os parágrafos */
+  line-height: 1.8;
+  color: #333; /* Cor mais escura para os parágrafos */
+}
+
+/* Estilo do Header */
 header {
-    background: #000000;
-    color: rgb(255, 0, 0);
-    padding: 1rem 0;
-    text-align: center;
+  background: #000000;
+  color: rgb(255, 0, 0);
+  padding: 1rem 0;
+  text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-nav ul li {
-    display: inline;
+header nav ul li {
+  display: inline;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Fonte Poppins para os links */
+  transition: color 0.3s ease;
 }
 
+header nav ul li a:hover {
+  color: #ff0000; /* Cor de destaque no hover */
+}
+
+/* Seções */
 section {
-    padding: 5rem;
-    margin: 0 auto;
-    max-width: 800px;
-    background: rgb(255, 255, 255);
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #007bff;
+  padding: 4rem;
+  margin: 0 auto;
+  max-width: 900px;
+  background: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form input, form textarea, form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #007bff;
-    border-radius: 5px;
+section h1, section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Estilo de Formulários */
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  border: 1px solid #007bff;
+  border-radius: 5px;
 }
 
 form button {
-    background: #007BFF;
-    color: rgb(247, 247, 247);
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+  background: #007bff;
+  color: rgb(247, 247, 247);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
+form button:hover {
+  background: #0056b3;
+}
+
+/* Estilo do Footer */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background: #000000;
-    color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
+  background: #000000;
+  color: rgb(255, 255, 255);
 }
 
-#fundo {
-    
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px #007BFF;
+/* Seção de Parcerias */
+#parceria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
+#parceria .fundo {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #007bff;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+#home img {
+  max-width: 600px;
+  margin: 1rem auto;
+  display: block;
+}
+
+#home .imagens {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 1rem 0;
+}
+
+#home .imagens img {
+  width: 48%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  #parceria .fundo {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  #parceria .fundo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #home .imagens {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home .imagens img {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Seção de Doações */
 #doacao {
-    padding: 5rem;
-    margin: 0 auto;
-    max-width: 800px;
-    background: rgb(255, 255, 255);
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(250, 249, 249, 0.1);
+  padding: 4rem;
+  margin: 0 auto;
+  max-width: 800px;
+  background: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(250, 249, 249, 0.1);
 }
 
 #doacao h2 {
-    color: #007BFF;
-    text-align: center;
+  color: #007bff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 #doacao p {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 #doacao form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #doacao label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
 }
 
-#doacao input, #doacao select, #doacao textarea {
-    padding: 0.75rem;
-    border: 1px solid #007BFF;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+#doacao input,
+#doacao select,
+#doacao textarea {
+  padding: 0.75rem;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 #doacao button {
-    background: #007BFF;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
+  background: #007bff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 #doacao button:hover {
-    background: #007BFF;
+  background: #0056b3;
 }
 
+/* Estilo da Home */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
 
+#home h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0;
+}
+
+/* Seção Sobre Nós */
+#sobre-nos {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+#sobre-nos h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+#sobre-nos p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem; /* Tamanho do título */
+    text-align: center;
+    background: linear-gradient(45deg, #00bfff, #8a2be2, #ff1493); /* Gradiente de cores vibrantes */
+    -webkit-background-clip: text; /* Aplica o gradiente no texto */
+    color: transparent; /* Deixa o texto transparente para o gradiente aparecer */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6); /* Efeito de brilho */
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  h1:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1); /* Brilho mais intenso no hover */
+  }
+  
+
+
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 3rem; /* Tamanho do título */
+    text-align: center;
+    background: linear-gradient(45deg, #00bfff, #8a2be2, #ff1493); 
+    -webkit-background-clip: text; /* Aplica o gradiente no texto */
+    color: transparent; /* Deixa o texto transparente para o gradiente aparecer */
+    text-shadow: 0 0 5px rgba(32, 2, 2, 0.6), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6); /* Efeito de brilho */
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+    
+    animation: blink 1.5s infinite; /* Aplica a animação de piscamento */
+  }
+  
+  /* Animação de piscamento (blink) */
+  @keyframes blink {
+    0% {
+      opacity: 1; /* Totalmente visível */
+      text-shadow: 0 0 5px rgba(182, 12, 12, 0.6), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6); /* Brilho normal */
+    }
+    50% {
+      opacity: 0.5; /* Meio transparente */
+      text-shadow: 0 0 20px rgb(185, 18, 18), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1); /* Brilho mais intenso */
+    }
+    100% {
+      opacity: 1; /* Totalmente visível novamente */
+      text-shadow: 0 0 5px rgba(29, 18, 190, 0.6), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6); /* Brilho normal */
+    }
+  }
+  
+  /* Efeito ao passar o mouse (hover) */
+  h1:hover {
+    text-shadow: 0 0 20px rgb(17, 189, 219), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1); /* Brilho mais intenso no hover */
+  }
+  
