@@ -9,7 +9,7 @@
 
 body {
   position: relative;
-  background-color: #007bff;
+  background-color: rgb(115, 136, 116);
   font-family: "Roboto", sans-serif; /* Fonte principal para o corpo do texto */
   line-height: 1.6;
   color: #ffffff;
