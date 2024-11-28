@@ -88,6 +88,4 @@ Caso tenha dúvidas ou queira mais informações, você pode entrar em contato d
 
 - [LinkedIn de Matheus de Oliveira Mathias](https://www.linkedin.com/in/matheusdmathias/)
 
----
 
-Agradecemos por explorar o projeto **MM Tecnologia**! Esperamos que seja útil para aprendizado e desenvolvimento.
